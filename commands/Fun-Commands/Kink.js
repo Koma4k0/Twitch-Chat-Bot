@@ -1,0 +1,93 @@
+module.exports = {
+    name: 'kink',
+    use: '[user]',
+    description: 'Generate a random kink for a user or yourself',
+    async execute(client, channel, tags, message, args) {
+        const kinks = [
+            "Acrotomophilia",
+            "Age Play",
+            "Autonepiophilia",
+            "Bondage",
+            "Breeding",
+            "Praise",
+            "Female led relationships",
+            "Financial Dominance",
+            "Cuckolding",
+            "Edging",
+            "Humiliation",
+            "Feet",
+            "Gagging",
+            "Impact Play",
+            "Lactophilia",
+            "Lingerie",
+            "Pregnancy",
+            "Urophilia",
+            "BDSM",
+            "Zoophilia",
+            "Medical Play",
+            "Roleplay",
+            "Wax Play",
+            "Voyeurism",
+            "Exhibitionism",
+            "Fisting",
+            "Knife Play",
+            "Pet Play",
+            "Pony Play",
+            "Sploshing",
+            "Tickling",
+            "Watersports",
+            "Cross-dressing",
+            "Body Worship",
+            "Electro Play",
+            "Suspension",
+            "Mummification",
+            "Scat Play",
+            "Latex",
+            "Furries",
+            "Objectophilia",
+            "Necrophilia",
+            "Asphyxiation",
+            "Food Play",
+            "Handcuffs",
+            "Sensory Deprivation",
+            "Dirty Talk",
+            "Bukkake",
+            "Golden Shower",
+            "Dragon Play",
+            "Robot Fetish",
+            "Cybersex",
+            "Hypnosis",
+            "Uniform Fetish",
+            "Piercing",
+            "BDSM Collars",
+            "Boot Worship",
+            "Sleep Play",
+            "Size Play",
+            "Mechanophilia",
+            "Microphilia",
+            "Macrophilia",
+            "Casting Fetish",
+            "Masking",
+            "Sleep Sex",
+            "Tentacles",
+            "Bimbofication",
+            "Transformation Fetish",
+            "Latex Gloves",
+            "Pegging",
+            "Piercing",
+            "Ponytail Pulling",
+            "Tattoo Fetish"
+        ];
+
+        const getRandomKink = () => {
+            const randomIndex = Math.floor(Math.random() * kinks.length);
+            return kinks[randomIndex];
+        };
+
+        const user = args[0] || tags.username;
+        const kink = getRandomKink();
+        
+        await client.say(channel, `${user}'s kink is ${kink}`);
+    },
+};
+

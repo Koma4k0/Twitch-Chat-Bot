@@ -1,0 +1,29 @@
+{
+  "name": "twitch-bot",
+  "version": "2.0",
+  "description": "An Advanced Twitch Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Koma4k",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.4",
+    "body-parser": "^1.20.2",
+    "colors": "^1.4.0",
+    "decimal.js": "^10.4.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.3",
+    "express-session": "^1.18.0",
+    "memorystore": "^1.6.7",
+    "moment-timezone": "^0.5.45",
+    "path": "^0.12.7",
+    "request": "^2.88.2",
+    "sqlite3": "^5.1.7",
+    "tmi.js": "^1.8.5",
+    "url": "^0.11.3"
+  }
+}

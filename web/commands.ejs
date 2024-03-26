@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commands</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0c0c0c;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #080808;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            animation: textGradient 5s infinite alternate;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            color: #fff;
+            text-align: center;
+        }
+
+        .container {
+            background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+            border-radius: 20px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+            width: calc(100% - 40px); /* Subtracting padding from the total width */
+            max-width: 100%; /* Adjusted max-width for responsiveness */
+            padding: 40px 20px; /* Adjusted padding */
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            width: 100%; /* Ensure table width fits container */
+            max-width: 80%; /* Ensure table doesn't exceed container width */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #080808;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 0.9vw;
+            letter-spacing: 1px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #2a2a2a;
+        }
+
+        tr:hover {
+            background-color: #383838;
+        }
+
+        td {
+            color: #fff;
+        }
+
+        .command {
+            font-weight: bold;
+        }
+
+        @media only screen and (max-width: 768px) {
+            body {
+                overflow-x: hidden; /* Prevent horizontal scrolling */
+            }
+
+            h1 {
+                font-size: 4vw;
+            }
+
+            h3 {
+                font-size: 3vw;
+            }
+
+            .container {
+                width: calc(100% - 40px); /* Adjusted width */
+                max-width: 100%; /* Adjusted max-width */
+                padding: 20px; /* Adjusted padding */
+            }
+
+            table {
+                font-size: 2vw; /* Decrease font size for better readability on smaller screens */
+            }
+
+            th, td {
+                padding: 10px; /* Adjusted padding */
+            }
+
+            th {
+                font-size: 1.5vw;
+                max-width: fit-content;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center; color: #fff;">Commands List</h1>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <h3>Built in Commands</h3>
+                    <h3>< > = Required | [ ] = Optional</h3>
+                    <tr>
+                        <th>Command</th>
+                        <th>Usage</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% commandInfo.forEach(command => { %>
+                        <tr>
+                            <td class="command">!<%= command.name %></td>
+                            <td class="command"><%= command.use %></td>
+                            <td><%= command.description %></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+            <table>
+                <thead>
+                    <h3>Custom Commands</h3>
+                    <tr>
+                        <th>Command</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% commands.forEach(command => { %>
+                        <tr>
+                            <td class="command"><%= command.command_name %></td>
+                            <td><%= command.command_output %></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+
+

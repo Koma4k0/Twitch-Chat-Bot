@@ -1,0 +1,32 @@
+{
+    "twitchApi": {
+        "oauthToken": "Twitch OAuth Token",
+        "botNickname": "Name of your bot",
+        "channelName": "Twitch Channel where bot will respond to commands",
+        "botId": "Your Bots Twitch User ID",
+        "botOwnerId": "Your Twitch User ID",
+        "clientId": "Twitch App Client ID",
+        "clientSecret": "Twitch App Client Secret",
+        "bearer_token": "Twitch App Bearer Token",
+        "bearer_refresh_token": "Twitch App Refresh Token"
+    },
+
+    "APIS": {
+        "weatherApiKey": "Weather Stack API Key",
+        "rapidApiKey": "RapidAPI Key",
+        "decapiMeKey": "DecAPI.me Key"
+    },
+
+    "ECONOMY": {
+        "cheerPoints": 100,
+        "giftSubPoints": 500,
+        "subPoints": 500,
+        "raidPoints": 1000,
+        "resubPoints": 500
+    },
+
+    "WEBSITE": {
+        "port": 80,
+        "domain": "http://127.0.0.1:80"
+    }
+}
