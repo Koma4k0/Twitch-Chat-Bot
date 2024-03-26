@@ -1,7 +1,7 @@
 # 📢 About the project
 Semi-Advanced Twitch Chat Bot coded in JavaScript using [tmi.js](https://tmijs.com/). If you want more features please star this repo. This is my open source version and does not contain many features my bot has.
 
-Made for https://twitch.tv/netlfixandchilly_
+Made for [Netflixandchilly on Twitch](https://twitch.tv/netlfixandchilly_)
 
 # 💬 Features
 - Over 50+ Built in commands
